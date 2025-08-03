@@ -34,8 +34,11 @@ flutter_gen:
     lottie: true
 
   colors:
+    enabled: true
     inputs:
-      - assets/color/colors.xml
+      - assets/colors/color.xml
+    # outputs:
+    #   class_name: AppColors
 flutter:
   uses-material-design: true
   assets:
