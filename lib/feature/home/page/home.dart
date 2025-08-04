@@ -13,8 +13,10 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
     var user2 = user(age: 1, name: "10", isActive: true).copyWith(name: "复杂");
-    return Center(
-      child: Text(user2.name??"ss"),
+    return Scaffold(
+      body: Center(
+        child: Text(user2.name??"ss"),
+      ),
     );
   }
 }
