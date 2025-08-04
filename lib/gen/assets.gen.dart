@@ -21,10 +21,24 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [home];
 }
 
+class $AssetsTranslationsGen {
+  const $AssetsTranslationsGen();
+
+  /// File path: assets/translations/en.json
+  String get en => 'assets/translations/en.json';
+
+  /// File path: assets/translations/zh.json
+  String get zh => 'assets/translations/zh.json';
+
+  /// List of all assets
+  List<String> get values => [en, zh];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
 }
 
 class AssetGenImage {

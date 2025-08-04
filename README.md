@@ -8,3 +8,11 @@ dart run easy_localization:generate -S assets/translations -O lib/generated
 localKey
 flutter pub run easy_localization:generate -S assets/translations -f keys -o locale_keys.g.dart
 -->
+
+
+<!-- 
+json 转 freezed
+https://app.quicktype.io/
+
+https://dartj.web.app/#/
+ -->
