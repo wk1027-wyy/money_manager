@@ -23,6 +23,7 @@ class _CounterPageState extends ConsumerState<CounterPage> {
           Text(LocaleKeys.subTitle).tr(),
           Assets.images.home.image(),
           Text(LocaleKeys.name).tr(),
+          Text(LocaleKeys.age).tr(),
         ],
       )),
     );
