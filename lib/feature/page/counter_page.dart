@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:money_/gen/assets.gen.dart';
@@ -16,8 +17,14 @@ class _CounterPageState extends ConsumerState<CounterPage> {
     // final counterAsync = ref.watch(counterControllerProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text(LocaleKeys.title), centerTitle: true),
-      body: Center(child: Assets.images.home.image()),
+      appBar: AppBar(title: const Text('title').tr(), centerTitle: true),
+      body: Center(child: Column(
+        children: [
+          Text(LocaleKeys.subTitle).tr(),
+          Assets.images.home.image(),
+          Text(LocaleKeys.name).tr(),
+        ],
+      )),
     );
   }
 }

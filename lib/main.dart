@@ -10,10 +10,10 @@ Future<void> main() async {
   runApp(
     ProviderScope(
       child: EasyLocalization(
-        supportedLocales: const [Locale('en', 'US'), Locale('zh', 'CN')],
+        supportedLocales: [Locale('en'), Locale('zh')],
         path: 'assets/translations',
-        fallbackLocale: const Locale('en', 'US'),
-        assetLoader: CodegenLoader(),
+        fallbackLocale: Locale('en'),
+        // assetLoader: CodegenLoader(),
         child: const MainApp(),
       ),
     ),
@@ -25,6 +25,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Scaffold(body: CounterPage()));
+    return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      home: Scaffold(body: CounterPage()),
+    );
   }
 }
