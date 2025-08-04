@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:money_/feature/bills/page/bills_page.dart';
 import 'package:money_/feature/statistics/page/statistics_page.dart';
+import 'package:money_/feature/savings/page/savings_page.dart';
 import 'package:money_/feature/profile/page/profile_page.dart';
 
 /// 主页面 - 包含底部导航栏的容器页面
@@ -19,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   final List<Widget> _pages = [
     const BillsPage(),
     const StatisticsPage(),
+    const SavingsPage(),
     const ProfilePage(),
   ];
 
@@ -49,6 +51,10 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.chartLine),
             label: '统计',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.piggyBank),
+            label: '存钱',
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.user),
