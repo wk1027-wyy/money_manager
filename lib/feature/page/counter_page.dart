@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:money_/gen/assets.gen.dart';
+import 'package:money_/generated/locale_keys.g.dart';
 
 class CounterPage extends ConsumerStatefulWidget {
   const CounterPage({super.key});
@@ -15,7 +16,7 @@ class _CounterPageState extends ConsumerState<CounterPage> {
     // final counterAsync = ref.watch(counterControllerProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('异步计数器'), centerTitle: true),
+      appBar: AppBar(title: const Text(LocaleKeys.title), centerTitle: true),
       body: Center(child: Assets.images.home.image()),
     );
   }
