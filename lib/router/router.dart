@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:money_/feature/detail/page/detail.dart';
 import 'package:money_/feature/home/page/home.dart';
-import 'package:money_/feature/main/page/main.dart';
+import 'package:money_/feature/main/page/main_page.dart';
 
 /**
  * // 基础导航
